@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include<conio.h>
+
+int main()
+{
+    int n, i;
+
+    printf("Enter n: ");
+    scanf("%d", &n);
+
+    for (i = 1; i <= n; i++)
+    {
+        printf("%d ", i * 2);
+    }
+
+    return 0;
+}

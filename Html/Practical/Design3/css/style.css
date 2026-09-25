@@ -1,0 +1,35 @@
+header {
+    background: url("http://127.0.0.1:5500/img/hero/hero-5/hero-bg.svg") no-repeat;
+    background-size: cover;
+    /* background-position: top center; */
+}
+header,main,footer,section{
+    padding:25px 15px 25px 15px;
+}
+nav.navbar.navbar-expand-lg.bg-body-tertiary {
+    background: none !important;
+    gap: 5px !important;
+}
+.card {
+    padding: 25px 15px 25px 15px;
+    box-shadow: 0px 10px 12px -4px rgba(0, 0, 0, 0.85);
+}
+a {
+    text-decoration: none;
+}
+.contact .col.card-title {
+    max-width: 26% !important;
+}
+form {
+    width: 100%;
+    min-width: 643px;
+}
+section.container-fluid.bg-light.clients {
+    padding: 12px 15px 15px 12px;
+    background: none !important;
+}
+*
+{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}

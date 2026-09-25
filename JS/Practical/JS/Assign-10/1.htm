@@ -1,0 +1,23 @@
+<!-- HTML Structure -->
+<button id="textBtn">Change Text</button>
+<p id="textPara">Original text content.</p>
+
+<img id="toggleImg" src="https://img.magnific.com/free-psd/user-interface-kit_23-2152012813.jpg?semt=ais_hybrid&w=740&q=80" alt="Toggle Image" style="display: block;">
+<script>
+// Task 1: Click event to change paragraph text
+const textBtn = document.getElementById('textBtn');
+const textPara = document.getElementById('textPara');
+textBtn.addEventListener('click', () => {
+    textPara.textContent = 'The text has been successfully changed!';
+});
+
+// Task 2: Double-click event to toggle image visibility
+const toggleImg = document.getElementById('toggleImg');
+toggleImg.addEventListener('dblclick', () => {
+    if (toggleImg.style.display === 'none') {
+        toggleImg.style.display = 'block';
+    } else {
+        toggleImg.style.display = 'none';
+    }
+});
+</script>

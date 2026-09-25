@@ -1,0 +1,35 @@
+<!-- HTML Structure -->
+<form id="userForm">
+    <input type="text" name="username" placeholder="Username" required>
+    <button type="submit">Submit</button>
+</form>
+
+<label for="dropdown">Choose an option:</label>
+<select id="dropdown">
+    <option value="">--Select--</option>
+    <option value="Option A">Option A</option>
+    <option value="Option B">Option B</option>
+</select>
+<p id="dropdownDisplay">Selected: None</p>
+<script>
+// Task 7: Submit event prevents reload and logs data
+const userForm = document.getElementById('userForm');
+
+userForm.addEventListener('submit', (event) => {
+    event.preventDefault(); 
+    const formData = new FormData(userForm);
+    console.log('Form Submitted Data:');
+    for (let [key, value] of formData.entries()) {
+        console.log(`${key}: ${value}`);
+    }
+});
+
+// Task 8: Change event updates paragraph text
+const dropdown = document.getElementById('dropdown');
+const dropdownDisplay = document.getElementById('dropdownDisplay');
+
+dropdown.addEventListener('change', (event) => {
+    dropdownDisplay.textContent = `Selected: ${event.target.value}`;
+});
+
+</script>

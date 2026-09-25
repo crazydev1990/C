@@ -1,0 +1,408 @@
+/*===============Header===================*/
+.topbar {
+    padding: 12px;
+}
+.navbar {
+    width: 100%;
+}
+div#navbarSupportedContent, .nav-item {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.banner
+{
+    background: url("../img/hero-bg.jpg")no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+}
+.bannercontainer h1
+{
+    font-size: 50px;
+    font-weight: 700;
+}
+.bannercontainer .col-md-6 p {
+    font-size: 20px;
+    font-weight: 500;
+    text-indent: 77px;
+}
+.bannercontainer button
+{
+    padding: 10px 20px;
+    border: none;
+}
+/*===============Four box header===================*/
+.four-boxes.d-flex.g-12 {
+    gap: 27px;
+}
+.four-boxes .card:not(:first-child) {
+    height: 89% !important;
+    margin-top:1% !important;
+}
+.four-boxes .card:first-child {
+    margin-left: 6%;
+}
+/*==============================about================*/
+.about-section
+{
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+}
+.about-wrapper
+{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+.about-image-box,
+.about-content-box
+{
+  flex: 1 1 350px;
+}
+.about-image-box img
+{
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+.about-content-box h2
+{
+  font-size: 32px;
+  margin-bottom: 15px;
+  color: #222;
+}
+.about-content-box p
+{
+  font-size: 16px;
+  line-height: 1.7;
+  color: #555;
+}
+.info-row
+{
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+.info-row:last-child
+{
+  margin-bottom: 0;
+}
+.small-icon
+{
+  width: 32px;
+  height: 32px;
+}
+.info-text h4
+{
+  font-size: 18px;
+  color: #333;
+  margin: 0 0 5px 0;
+}
+.info-text p
+{
+  font-size: 15px;
+  line-height: 1.6;
+  color: #666;
+  margin: 0;
+}
+/*=================Features==========================*/
+.features-section 
+{
+    background-color: rgba(60,50,80,0.2);
+    padding: 40px 30px;
+}
+.features-wrapper
+{
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+.feature-box {
+    flex: 1 1 219px;
+    max-width: 180px;
+    background-color: whitesmoke;
+    padding: 30px 20px;
+    border: 1px solid rgb(238, 238, 238);
+    border-radius: 10px;
+    text-align: center;
+    height: 119px;
+    vertical-align: middle;
+    color: #111 !important;
+}
+.feature-icon
+{
+  width: 50px;
+  height: 50px;
+  object-fit: contain; 
+} 
+.feature-box h4
+{
+  font-size: 20px;
+  color: #fff;
+  margin: 0 0 10px 0;
+}
+.feature-box p
+{
+  font-size: 15px;
+  line-height: 1.6;
+  color: #eee;
+  margin: 0;
+}
+.feature-box * {
+    color: #111 !important;
+}
+/*===================Service=====================*/
+.services-section
+{
+  background-color: #f4f4f4;
+  padding: 60px 20px;
+}
+.section-title
+{
+  text-align: center;
+  font-size: 32px;
+  color: #222;
+  margin-bottom: 40px;
+}
+.services-grid
+{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.service-card {
+    background-color: whitesmoke;
+    padding: 35px 45px;
+    text-align: center;
+    box-sizing: border-box;
+    width: 33%;
+    /* height: 91%; */
+    flex-grow: 1;
+    flex: 1 1 350px !important;
+    border: 1px solid #c0c0c0;
+}
+.service-card * {
+    color: #111 !important;
+}
+.service-img
+{
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 50%; /* ફોટો એકદમ ગોળ દેખાશે */
+  margin-bottom: 20px;
+}
+.service-card h4
+{
+  font-size: 20px;
+  color: #fcfcfc;
+  margin: 0 0 12px 0;
+}
+.service-card p
+{
+  font-size: 15px;
+  line-height: 1.6;
+  color: #eee;
+  margin: 0;
+}
+/*=========================Team===========================*/
+.card-icon img {
+    width: 100%;
+    object-fit: cover;
+}
+.col img {
+    object-fit: contain;
+    width: 85%;
+    overflow: hidden;
+}
+.team-wrapper .card {
+    margin: 2%;
+}
+/*=============faq===========*/
+.faq-container{
+  padding:14px;
+}
+.accordion-item {
+    margin: 2%;
+}
+section{
+  padding-bottom:50px;
+}
+div#collapseOne {
+    background: aliceblue;
+    color: inherit;
+}
+.faq-container h2{
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.faq-container h3{
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.faq-container p{
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+/*========================== vertical nav=================*/
+.img {
+    min-height: 250px !important;
+    min-width: 294px;
+}
+/*=================Contact===================*/
+.col.item-contact-icon {
+    max-width: 30px;
+}
+.col.item-contact-text.position-relative.start-45 {
+    position: relative;
+    left: 3%;
+}
+.row.newitem {
+    margin-bottom: 2%;
+    line-height: 1.2 !important;
+    padding: 55px 2px 0px 5px;
+}
+.submitbtn {
+    text-align: center;
+    position: relative;
+    left: 37%;
+}
+/*===============Footer====================*/
+.main-footer
+{
+   background-color: #1a1a1a;
+   color: #ffffff;
+   padding: 60px 20px;
+}
+.footer-wrapper
+{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.footer-column
+{
+      flex-grow: 1;
+      width: 18%;
+      min-width: 160px;
+}
+.footer-column.footer-big
+{
+  width: 35%;
+  min-width: 280px;
+}
+.footer-contact-info
+{
+  margin: 15px 0;
+}
+.social-icons
+{
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+}
+.icon-link img
+{
+   width: 30px;
+   height: 30px;
+   object-fit: contain;
+   background-color: #333;
+   padding: 6px;
+   border-radius: 50%;
+   transition: 0.3s;
+}
+.icon-link img:hover
+{
+  background-color: #007bff;
+  transform: translateY(-3px);
+}
+.footer-column h3
+{
+  font-size: 24px;
+  color: #007bff;
+  margin: 0 0 15px 0;
+}
+.footer-column h4
+{
+  font-size: 18px;
+  margin: 0 0 15px 0;
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
+}
+.footer-column p
+{
+  font-size: 14px;
+  color: #b3b3b3;
+  line-height: 1.6;
+  margin: 5px 0;
+}
+.footer-column ul
+{
+  list-style: none;
+}
+.footer-column ul li
+{
+  margin-bottom: 10px;
+}
+.footer-column ul li a
+{
+  color: #b3b3b3;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-column ul li a:hover
+{
+ color: #ffffff;
+ padding-left: 5px;
+}
+.footer-bottom
+{
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+}
+.footer-bottom p
+{
+  font-size: 13px;
+  color: #888888;
+}
+
+/*================Appointment================*/
+section.appointments {
+    padding: 25px 25px 25px 25px;
+    text-align: center;
+    align-items: center;
+    margin-left: 0%;
+}
+form {
+    margin-left: 26%;
+}
+.appointments .col-auto {
+    margin: 2%;
+}
+.makeappoint {
+    margin-right: 360px;
+}
+.contact form {
+    margin-left: 0%;
+}

@@ -1,0 +1,54 @@
+/*==========Top bar================*/
+img.img-fluid.logo {
+    height: 30%;
+    width: 40%;
+}
+section.topbar {
+    background: floralwhite;
+}
+.carousel-item.active > .slide {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../img/hero-carousel/hero-carousel-1.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 588px !important;
+    word-wrap: break-word;
+    text-wrap: balance;
+    color:#fff;
+}
+hr.line, .breadcrumb {
+    display: inline-flex;    
+}
+nav.breadcrumb {
+    line-height: 2.0;
+}
+section.container.breadcrumb.d-flex.gap-4 {
+    height: 32px;
+    padding: 0px !important;
+    margin-bottom: 0px;
+}
+.clients img {
+    height: 48%;
+}
+section.clients {
+    height: 150px !important;
+}
+.portfolio h3 {
+    margin-left: 5.3%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none !important;
+}
+.footer a{
+    color:#eee;
+}
+ul.list-unstyled a {
+    color: #eee !important;
+    font-size: 14px;
+}

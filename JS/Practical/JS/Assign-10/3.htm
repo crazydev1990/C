@@ -1,0 +1,18 @@
+<!-- HTML Structure -->
+<label for="keyInput">Type here:</label>
+<input type="text" id="keyInput" placeholder="Press keys...">
+<p id="valueDisplay">Current Value: </p>
+<script>
+const keyInput = document.getElementById('keyInput');
+const valueDisplay = document.getElementById('valueDisplay');
+
+// Task 5: Keydown logs the pressed key to the console
+keyInput.addEventListener('keydown', (event) => {
+    console.log(`Key pressed: ${event.key}`);
+});
+
+// Task 6: Keyup displays the input value in a paragraph
+keyInput.addEventListener('keyup', () => {
+    valueDisplay.textContent = `Current Value: ${keyInput.value}`;
+});
+</script>

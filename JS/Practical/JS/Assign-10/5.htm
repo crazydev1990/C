@@ -1,0 +1,27 @@
+<!-- HTML Structure -->
+<button id="addItemBtn">Add New Child Item</button>
+<ul id="parentList">
+    <li>Existing Item 1</li>
+    <li>Existing Item 2</li>
+</ul>
+<script>
+    // JavaScript Implementation
+const parentList = document.getElementById('parentList');
+const addItemBtn = document.getElementById('addItemBtn');
+
+// Task 9 & 10: Single listener on parent handles existing and dynamic children
+parentList.addEventListener('click', (event) => {
+    if (event.target && event.target.tagName === 'LI') {
+        console.log(`Clicked list item content: ${event.target.textContent}`);
+    }
+});
+
+// Helper action to add items dynamically
+let itemCounter = 3;
+addItemBtn.addEventListener('click', () => {
+    const newLi = document.createElement('li');
+    newLi.textContent = `Dynamic Item ${itemCounter++}`;
+    parentList.appendChild(newLi);
+});
+
+</script>
