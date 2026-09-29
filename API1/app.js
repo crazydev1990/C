@@ -30,7 +30,7 @@ const loadSwiggyData = async () => {
     deliveryBox.innerHTML = "";
 
     for (let i = 0; i < cards.length; i++) {
-        if (cards[i].card.card.id === "top_brands_for_you") {
+        if (cards[i].card.card.id === "top_brands_for_you" || cards[i].card.card.id === "restaurant_grid_listing") {
             const onlineDelivery = cards[i].card.card.gridElements.infoWithStyle.restaurants;
             onlineDelivery.forEach(res => {
                 const info = res.info;
