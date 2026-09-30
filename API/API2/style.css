@@ -1,0 +1,205 @@
+#del-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    width: calc(25% - 24px);
+    min-width: 240px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(0.95);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 1000px) {
+    .card {
+        width: calc(33.33% - 22px);
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 16px);
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%;
+    }
+}
+#del-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    padding: 20px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none; /* મોર્ડન બ્રાઉઝર્સ માટે સ્ક્રોલબાર છુપાવશે */
+}
+
+/* ક્રોમ અને સફારી બ્રાઉઝર માટે સ્ક્રોલબાર છુપાવવા */
+#del-flex::-webkit-scrollbar {
+    display: none;
+}
+
+/* કેરોયુઝલની અંદર કાર્ડ્સ એક સરખા આડા દેખાય તે માટે */
+#del-flex .card {
+    flex: 0 0 260px; /* કાર્ડની સાઈઝ ફિક્સ રાખશે અને તેને દબાવા નહીં દે */
+    display: inline-block;
+    vertical-align: top;
+}
+/**/
+#top-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    padding: 20px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none; 
+    flex-wrap:wrap;
+}
+
+/* ક્રોમ અને સફારી બ્રાઉઝર માટે સ્ક્રોલબાર છુપાવવા */
+#top-flex::-webkit-scrollbar {
+    display: none;
+}
+
+/* કેરોયુઝલની અંદર કાર્ડ્સ એક સરખા આડા દેખાય તે માટે */
+#top-flex .card {
+    flex: 0 0 260px; /* કાર્ડની સાઈઝ ફિક્સ રાખશે અને તેને દબાવા નહીં દે */
+    display: inline-block;
+    vertical-align: top;
+}
+#mind-flex {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+#mind-flex::-webkit-scrollbar {
+    display: none;
+}
+/* આખા પેજનું બેઝિક સેટિંગ */
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+    color: #02060c;
+    min-height: 100vh;
+}
+
+/* ત્રણેય મુખ્ય કન્ટેનર (Flexbox Layout) */
+#mind-flex, #top-flex, #del-flex {
+    display: flex;
+    gap: 28px;
+    padding: 24px 10px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* મિની-ફ્લેક્સ અને ટોપ-ફ્લેક્સ માટે આડું સ્ક્રોલ (Carousel) */
+#mind-flex, #top-flex {
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+}
+#mind-flex::-webkit-scrollbar, #top-flex::-webkit-scrollbar {
+    display: none;
+}
+
+/* જાયન્ટ ડિલિવરી લિસ્ટ નીચે સરસ ગોઠવવા માટે wrap */
+#del-flex {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+/* ૧. "What's on your mind" સેક્શનની 3D ડિઝાઇન */
+.mind-item {
+    flex: 0 0 144px;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.mind-item:hover {
+    transform: translateY(-8px) scale(1.08) rotate(2deg);
+    filter: drop-shadow(0 15px 12px rgba(0,0,0,0.15));
+}
+
+/* ૨. રેસ્ટોરન્ટ્સ માટેનું પ્રીમિયમ 3D કાર્ડ લુક */
+.card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 12px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: sans-serif;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06), 0 3px 6px rgba(0, 0, 0, 0.04);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* જાયન્ટ લિસ્ટના કાર્ડ્સની સાઈઝ ગ્રીડ મુજબ સેટ કરવા */
+#del-flex .card {
+    width: calc(25% - 21px);
+    min-width: 260px;
+}
+#top-flex .card {
+    flex: 0 0 260px;
+}
+
+/* 3D હોવર ઇફેક્ટ: કાર્ડ ઉપર આવશે અને નીચે ડાર્ક શેડો પડશે */
+.card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.12), 0 8px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* કાર્ડની અંદરનું ઇમેજ બોક્સ */
+.card > div:first-child {
+    width: 100%;
+    aspect-ratio: 16/10;
+    border-radius: 14px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.1);
+}
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+.card:hover img {
+    transform: scale(1.08); /* હોવર કરવાથી ફોટો ઝૂમ થશે */
+}
+
+/* ૩. રેટિંગ બોક્સ અને લખાણની 3D હાઇલાઇટ સ્ટાઇલ */
+.rating-box {
+    background: linear-gradient(135deg, #1d893b 0%, #257a3e 100%);
+    color: #fff;
+    padding: 3px 8px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 800;
+    box-shadow: 0 3px 6px rgba(37,122,62,0.3);
+}
+
+/* રિસ્પોન્સિવ સેટિંગ્સ (મોબાઇલ અને ટેબ્લેટ માટે ઓટોમેટીક એડજસ્ટમેન્ટ) */
+@media (max-width: 1024px) {
+    #del-flex .card { width: calc(33.33% - 19px); }
+}
+@media (max-width: 768px) {
+    #del-flex .card { width: calc(50% - 14px); }
+    h2 { font-size: 20px; }
+}
+@media (max-width: 480px) {
+    #del-flex .card { width: 100%; }
+}
+
