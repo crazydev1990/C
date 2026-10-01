@@ -6,12 +6,22 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <header class="navbar">
+    <header class="navbar text-center">
+        Switch Mode
+        <label class="switch">
+            <input type="checkbox" id="toggleSwitch">
+            <span class="slider"></span>
+        </label>
+        <p>Status: <span id="statusText">Dark Mode is OFF</span></p>
     </header>
     <main class="container">        
         <section>
             <h2 align="center">What's on your mind?</h2>
-            <div id="mind-flex" class="mind-flex"></div>
+            <div class="carousel-container">
+              <div class="product-carousel">
+                 <div id="mind-flex" class="mind-flex"></div>
+              </div>
+            </div>
         </section>
         <section>
             <h2 align="center">Top restaurant chains in Ahmedabad</h2>

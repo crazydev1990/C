@@ -11,15 +11,26 @@ const api=async()=>{
     container.innerHTML='';
     delContainer.innerHTML='';
 
-    let whatsOnYourMind = data.data.cards[0].card.card.imageGridCards.info;
-    console.log(whatsOnYourMind);
-    whatsOnYourMind.forEach((element)=>{
-        mindFlex.innerHTML+=`
-        <div class="mind-item" style="cursor:pointer;flex:0 0 144px;text-align:center;">
-            <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${element.imageId}" style="width:100%;height:100%;object-fit:contain;">
-        </div>
-        `;
-    });
+    // let whatsOnYourMind = data.data.cards[0].card.card.imageGridCards.info;
+    // console.log(whatsOnYourMind);
+    // whatsOnYourMind.forEach((element)=>{
+    //     mindFlex.innerHTML+=`        
+    //         <div class="mind-item" style="cursor:pointer;flex:0 0 144px;text-align:center;">
+    //            <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${element.imageId}" style="width:100%;height:100%;object-fit:contain;">
+    //         </div>         
+    //     `;
+    // });
+let whatsOnYourMind = data.data.cards[0].card.card.imageGridCards.info;
+console.log(whatsOnYourMind);
+mindFlex.innerHTML = "";
+whatsOnYourMind.forEach((element) => {
+    mindFlex.innerHTML += `        
+        <div class="mind-item" style="cursor:pointer;">
+           <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/${element.imageId}" style="width:100%; height:100%; object-fit:contain;" alt="food item">
+        </div>         
+    `;
+});
+
  
     let swiggy = data.data.cards[1].card.card.gridElements.infoWithStyle.restaurants;
     console.log(swiggy);
@@ -62,3 +73,19 @@ const api=async()=>{
     });
 }
 api();
+
+const toggleSwitch = document.getElementById('toggleSwitch');
+const statusText = document.getElementById('statusText');
+//statusText.style.visibility = 'hidden';
+
+toggleSwitch.addEventListener('change', function() {
+  if (this.checked) {
+    statusText.textContent = 'Dark Mode is ON';
+    document.querySelector('.container').style.backgroundColor = '#000';
+    document.querySelector('.container').style.color = '#fff';
+  } else {
+    statusText.textContent = 'Dark Mode is OFF';
+    document.querySelector('.container').style.backgroundColor = '#fff';
+    document.querySelector('.container').style.color = '#000';
+  }
+});

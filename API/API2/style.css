@@ -202,4 +202,84 @@ body {
 @media (max-width: 480px) {
     #del-flex .card { width: 100%; }
 }
+/* The container track */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
 
+/* Hide native checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The visible slider track */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+/* The circular inner knob */
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+/* Track color changes when checked */
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+/* Knob moves to the right when checked */
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
+/* Container for the carousel */
+.carousel-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.mind-flex {
+  display: flex;
+  gap: 24px; 
+  overflow-x: auto; 
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  padding: 15px 10px;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+}
+
+.mind-item {
+  flex: 0 0 144px; 
+  scroll-snap-align: start;
+  transition: transform 0.2s ease;
+}
+
+.mind-item:hover {
+  transform: scale(1.05); 
+}
